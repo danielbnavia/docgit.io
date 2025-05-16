@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Integration Metrics Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    h1 { color: #2C3E50; }
+    .metric { margin-bottom: 1rem; }
+    .section { margin-top: 2rem; }
+    .section h2 { color: #34495E; }
+    ul { margin: 0; padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Integration Metrics for May 1–15, 2025</h1>
+
+  <div class="metric">
+    <strong>Transaction Volume:</strong> 125,000 API calls/day
+  </div>
+  <div class="metric">
+    <strong>Average Latency:</strong> 350 ms
+  </div>
+  <div class="metric">
+    <strong>Success Rate:</strong> 98.4 %
+  </div>
+  <div class="metric">
+    <strong>Failure Rate:</strong> 1.6 %
+  </div>
+  
+  <div class="section">
+    <h2>Executive Summary</h2>
+    <p>Over the reporting period, transaction volume averaged 125,000 API calls/day, with latency at 350 ms. Success held at 98.4 %, while failures rose to 1.6 %. Versus the prior period, volume grew 12 %, latency increased 5 %, and error rate climbed 0.4 %. We missed our 99 % uptime SLA by 0.6 %, though latency remains under 500 ms. Peak (11 am–1 pm AWST) saw queue backlogs and a 20 % surge in timeout tickets, impacting APAC mobile users.</p>
+  </div>
+
+  <div class="section">
+    <h2>Action Items</h2>
+    <ul>
+      <li>Provision an extra API cluster during 11 am–1 pm AWST to handle spikes.</li>
+      <li>Implement response-level caching on high-frequency endpoints to cut latency.</li>
+      <li>Add adaptive retry logic for transient failures and auto-flag persistent errors.</li>
+      <li>Configure real-time SLA alerts for success-rate dips below 99 %.</li>
+    </ul>
+  </div>
+</body>
+</html>
